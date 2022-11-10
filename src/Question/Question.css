@@ -24,9 +24,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
 
-.question__text{}
+.question__stars{
+
+}
+
+.question__star{
+    color: gold;
+    font-size: 300%;
+}
 
 .question__footer{
     height: 20%;

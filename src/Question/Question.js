@@ -8,7 +8,20 @@ const Question = () => {
             </header>
             <section className="question__section">
                 <p className="question__text">(1 ster staat voor zéér slecht, 5 sterren staan voor zéér goed)</p>
-                ⭐⭐⭐⭐⭐
+                <div className="question__stars">
+                    <input type="radio" name="star" className="question__radio"/>
+                    <input type="radio" name="star" className="question__radio"/>
+                    <input type="radio" name="star" className="question__radio"/>
+                    <input type="radio" name="star" className="question__radio"/>
+                    <input type="radio" name="star" className="question__radio"/>
+                    {/*
+                    <i className="question__star fa-solid fa-star"></i>
+                    <i className="question__star fa-solid fa-star"></i>
+                    <i className="question__star fa-solid fa-star"></i>
+                    <i className="question__star fa-regular fa-star"></i>
+                    <i className="question__star fa-regular fa-star"></i> 
+                    */}
+                </div>
             </section>
             <footer className="question__footer">
                 <button className="question__button">Vorige</button>
