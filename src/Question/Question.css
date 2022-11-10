@@ -28,11 +28,11 @@
 }
 
 .question__stars{
-
+    display: flex;
+    gap: 2rem;
 }
 
 .question__star{
-    color: gold;
     font-size: 300%;
 }
 
