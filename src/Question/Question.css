@@ -20,6 +20,10 @@
 .question__section{
     height: 65%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .question__text{}
@@ -30,4 +34,20 @@
     align-items: flex-end;
     justify-content: space-between;
     padding: 2rem;
+}
+
+.question__button{
+    font-size: 100%;
+    border: none;
+    background: hsl(350, 79%, 39%);
+    outline: none;
+    border-radius: 2rem;
+    width: 25rem;
+    height: 4rem;
+    transition: 0.2s;
+}
+
+.question__button:hover{
+    cursor: pointer;
+    background: hsl(350, 79%, 49%);
 }

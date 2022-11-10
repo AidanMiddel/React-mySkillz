@@ -11,8 +11,8 @@ const Question = () => {
                 ⭐⭐⭐⭐⭐
             </section>
             <footer className="question__footer">
-                <button className="question__previous">Vorige</button>
-                <button className="question__next">Volgende</button>
+                <button className="question__button">Vorige</button>
+                <button className="question__button">Volgende</button>
             </footer>
         </article>
     )
