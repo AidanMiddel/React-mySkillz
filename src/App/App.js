@@ -1,9 +1,10 @@
 import "./App.css"
+import Question from "../Question/Question"
 
 const App = () => {
     return (
-        <h1>hi</h1>
+        <Question />
     )
 }
 
-export default App
+export default App;
