@@ -1,6 +1,5 @@
 Video's Les 9 - React-router, meerdere URL's, het onthouden van grotere stukken data
 
-Video 9/23 => https://web.microsoftstream.com/video/5622f808-99b3-4dd1-ae30-cdd5de6eefb2?list=studio
 Video 10/23 => https://web.microsoftstream.com/video/28c4ae47-bd77-4523-b2d6-675bb12206f1?list=studio
 Video 11/23 => https://web.microsoftstream.com/video/b93d23f6-17ff-4fac-a530-0d91af71aa60?list=studio
 Video 12/23 => https://web.microsoftstream.com/video/169203f4-8d18-48b7-8ad0-b19adaa2c4e2?list=studio

@@ -5,7 +5,7 @@ class Question extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: 0,
+            rating: 1,
         }
     }
 
@@ -13,6 +13,10 @@ class Question extends React.Component {
         console.log("geklikt")
     }
     render() {
+        let starsArray = [];
+        for(let i = 0; i < this.state.rating; i++){
+            starsArray.push(<i onClick={this.onStarClicked} className="question__star fa-solid fa-star"></i>)
+        }
         return (
             <article className="question">
                 <header className="question__header">
@@ -21,11 +25,7 @@ class Question extends React.Component {
                 <section className="question__section">
                     <p className="question__text">(1 ster staat voor zéér slecht, 5 sterren staan voor zéér goed)</p>
                     <div className="question__stars">
-                        <i onClick={this.onStarClicked} className="question__star fa-regular fa-star"></i>
-                        <i onClick={this.onStarClicked} className="question__star fa-regular fa-star"></i>
-                        <i onClick={this.onStarClicked} className="question__star fa-regular fa-star"></i>
-                        <i onClick={this.onStarClicked} className="question__star fa-regular fa-star"></i>
-                        <i onClick={this.onStarClicked} className="question__star fa-regular fa-star"></i>
+                        {starsArray}
                     </div>
                 </section>
                 <footer className="question__footer">
