@@ -1,26 +1,31 @@
 .question{
-    width: 60rem;
-    height: 40rem;
+    width: 65rem;
+    height: 50rem;
     background: #E94560;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 0.5rem 0.2rem hsl(350, 79%, 39%);
 }
 
 .question__header{
-    height: 40%;
-    background: red;
+    height: 15%;
     padding: 2rem;
+
+}
+
+.question__h2{
+    font-size: 200%;
+    text-align: center;
 }
 
 .question__section{
-    height: 40%;
-    background: green;
+    height: 65%;
     padding: 2rem;
 }
 
+.question__text{}
+
 .question__footer{
     height: 20%;
-    background: blue;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
