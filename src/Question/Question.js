@@ -5,17 +5,22 @@ class Question extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: 1,
+            rating: 0,
         }
     }
 
-    onStarClicked = (event) => {
-        console.log("geklikt")
+    onStarClicked = (rating) => {
+        this.setState({
+            rating: rating + 1,
+        })
     }
     render() {
         let starsArray = [];
-        for(let i = 0; i < this.state.rating; i++){
-            starsArray.push(<i onClick={this.onStarClicked} className="question__star fa-solid fa-star"></i>)
+        for (let i = 0; i < this.state.rating; i++) {
+            starsArray.push(<i onClick={() => this.onStarClicked(i)} className="question__star fa-solid fa-star"></i>)
+        }
+        for (let i = this.state.rating; i < 5; i++) {
+            starsArray.push(<i onClick={() => this.onStarClicked(i)} className="question__star fa-regular fa-star"></i>)
         }
         return (
             <article className="question">
