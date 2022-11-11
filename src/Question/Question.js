@@ -9,6 +9,10 @@ class Question extends React.Component {
         }
     }
 
+    componentDidMount(){
+        this.setState({rating: this.props.rating})
+    }
+
     onStarClicked = (rating) => {
         this.setState({
             rating: rating + 1,
@@ -25,7 +29,7 @@ class Question extends React.Component {
         return (
             <article className="question">
                 <header className="question__header">
-                    <h2 className="question__h2">Hoe goed beheers je nu react?</h2>
+                    <h2 className="question__h2">#{this.props.number} {this.props.question}</h2>
                 </header>
                 <section className="question__section">
                     <p className="question__text">(1 ster staat voor zéér slecht, 5 sterren staan voor zéér goed)</p>
