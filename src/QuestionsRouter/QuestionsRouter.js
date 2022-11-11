@@ -12,7 +12,16 @@ class QuetionsRouter extends React.Component {
     }
 
     onRate = (rating, number) => {
-        console.log(this.state.Questions[number -1])
+        let oldState = this.state.Questions;
+        let newState = oldState.map(question => {
+            if(question.number === number){
+                question.rating = rating;
+                return question
+            }
+            return question;
+        })
+
+        this.setState({question: newState})
     }
 
     componentDidMount() {

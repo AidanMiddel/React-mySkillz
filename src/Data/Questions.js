@@ -17,42 +17,42 @@ const Questions = [
         "number": 3,
         "question": "Hoe goed was je in HTML?",
         "rating": 0,
-        "previous": 2,
-        "next": 4
+        "previous": "2",
+        "next": "4"
     },
     {
         "number": 4,
         "question": "Hoe goed ben je nu in HTML?",
         "rating": 0,
-        "previous": 3,
-        "next": 5
+        "previous": "3",
+        "next": "5"
     },
     {
         "number": 5,
         "question": "Hoe goed was je in CSS?",
         "rating": 0,
-        "previous": 4,
-        "next": 6
+        "previous": "4",
+        "next": "6"
     },
     {
         "number": 6,
         "question": "Hoe goed ben je nu in CSS?",
         "rating": 0,
-        "previous": 5,
-        "next": 7
+        "previous": "5",
+        "next": "7"
     },
     {
         "number": 7,
         "question": "Hoe goed was je in React?",
         "rating": 0,
-        "previous": 6,
-        "next": 8
+        "previous": "6",
+        "next": "8"
     },
     {
         "number": 8,
         "question": "Hoe goed ben je nu in React?",
         "rating": 0,
-        "previous": 7,
+        "previous": "7",
         "next": "done"
     },
 ];

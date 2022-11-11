@@ -25,10 +25,10 @@ class Question extends React.Component {
     render() {
         let starsArray = [];
         for (let i = 0; i < this.state.rating; i++) {
-            starsArray.push(<i onClick={() => this.onStarClicked(i)} className="question__star fa-solid fa-star"></i>)
+            starsArray.push(<i key={i} onClick={() => this.onStarClicked(i)} className="question__star fa-solid fa-star"></i>)
         }
         for (let i = this.state.rating; i < 5; i++) {
-            starsArray.push(<i onClick={() => this.onStarClicked(i)} className="question__star fa-regular fa-star"></i>)
+            starsArray.push(<i key={i} onClick={() => this.onStarClicked(i)} className="question__star fa-regular fa-star"></i>)
         }
         return (
             <article className="question">
