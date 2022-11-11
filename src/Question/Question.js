@@ -1,5 +1,6 @@
 import React from "react";
-import {withRouter} from "react-router";
+import { withRouter} from "react-router";
+import { Link } from "react-router-dom";
 import "./Question.css";
 
 class Question extends React.Component {
@@ -11,8 +12,8 @@ class Question extends React.Component {
         }
     }
 
-    componentDidMount(){
-        this.setState({rating: this.props.rating})
+    componentDidMount() {
+        this.setState({ rating: this.props.rating })
     }
 
     onStarClicked = (rating) => {
@@ -40,8 +41,12 @@ class Question extends React.Component {
                     </div>
                 </section>
                 <footer className="question__footer">
-                    <button className="question__button">Vorige</button>
-                    <button className="question__button">Volgende</button>
+                    <Link to={this.props.previous}>
+                        <button className="question__button">Vorige</button>
+                    </Link>
+                    <Link to={this.props.next}>
+                        <button className="question__button">Volgende</button>
+                    </Link>
                 </footer>
             </article>
         )
