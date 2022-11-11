@@ -1,19 +1,17 @@
 import "./App.css"
-import Question from "../Question/Question"
+
 import { Route, Switch } from "react-router-dom";
 import Intro from "../Intro/Intro";
-import Questions from "../Data/Questions";
+
+import QuestionsRouter from "../QuestionsRouter/QuestionsRouter";
 
 const App = () => {
-    let questionsToBeRendered = Questions.map(questionObject => {
-        return <Question key={questionObject.number} number={questionObject.number} question={questionObject.question} rating={questionObject.rating} />
-    })
+
     return (
         <>
             <Switch>
-                <Route path="/vraag/:number"><Question/></Route>
-                <Route path="/"><Intro/></Route>
-                
+                <Route path="/vraag/:number" component={QuestionsRouter}></Route>
+                <Route path="/" component={Intro}></Route>
             </Switch>
         </>
     )
