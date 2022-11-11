@@ -1,6 +1,6 @@
 import "./App.css"
 import Question from "../Question/Question"
-import { Route, Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Intro from "../Intro/Intro";
 import Questions from "../Data/Questions";
 
@@ -10,7 +10,11 @@ const App = () => {
     })
     return (
         <>
-            {questionsToBeRendered}
+            <Switch>
+                <Route path="/vraag/:number"><Question/></Route>
+                <Route path="/"><Intro/></Route>
+                
+            </Switch>
         </>
     )
 }
