@@ -6,7 +6,6 @@ import "./Question.css";
 class Question extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.myNumber)
         this.state = {
             rating: 0,
         }
@@ -19,6 +18,8 @@ class Question extends React.Component {
     onStarClicked = (rating) => {
         this.setState({
             rating: rating + 1,
+        }, () =>{
+            this.props.onRate(this.state.rating, this.props.number);
         })
     }
     render() {
