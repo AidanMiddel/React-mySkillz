@@ -31,7 +31,7 @@ class QuetionsRouter extends React.Component {
     render() {
         this.myNumber = this.props.match.params.number
         let questionToBeRendered = this.state.Questions.map(questionObject => {
-            if (this.myNumber == questionObject.number) {
+            if (this.myNumber === questionObject.number) {
                 return <Question onLast={() => this.props.onLast(this.state.Questions)} last={questionObject.last} onRate={this.onRate} previous={questionObject.previous} next={questionObject.next} number={questionObject.number} key={questionObject.number} question={questionObject.question} rating={questionObject.rating} />;
             }
             else {
