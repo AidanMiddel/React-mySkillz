@@ -14,14 +14,14 @@ class QuetionsRouter extends React.Component {
     onRate = (rating, number) => {
         let oldState = this.state.Questions;
         let newState = oldState.map(question => {
-            if(question.number === number){
+            if (question.number === number) {
                 question.rating = rating;
                 return question
             }
             return question;
         })
 
-        this.setState({question: newState})
+        this.setState({ question: newState })
     }
 
     componentDidMount() {
@@ -32,7 +32,7 @@ class QuetionsRouter extends React.Component {
         this.myNumber = this.props.match.params.number
         let questionToBeRendered = this.state.Questions.map(questionObject => {
             if (this.myNumber == questionObject.number) {
-                return <Question onRate={this.onRate} previous={questionObject.previous} next={questionObject.next} number={questionObject.number} key={questionObject.number} question={questionObject.question} rating={questionObject.rating} />;
+                return <Question onLast={() => this.props.onLast(this.state.Questions)} last={questionObject.last} onRate={this.onRate} previous={questionObject.previous} next={questionObject.next} number={questionObject.number} key={questionObject.number} question={questionObject.question} rating={questionObject.rating} />;
             }
             else {
                 return null;

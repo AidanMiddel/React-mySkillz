@@ -53,7 +53,8 @@ const Questions = [
         "question": "Hoe goed ben je nu in React?",
         "rating": 0,
         "previous": "7",
-        "next": "done"
+        "next": "../outro",
+        "last": true
     },
 ];
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter} from "react-router";
+import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import "./Question.css";
 
@@ -18,11 +18,15 @@ class Question extends React.Component {
     onStarClicked = (rating) => {
         this.setState({
             rating: rating + 1,
-        }, () =>{
+        }, () => {
             this.props.onRate(this.state.rating, this.props.number);
         })
     }
     render() {
+        let nextButtonToBeRendered = <Link to={this.props.next}><button className="question__button">Volgende</button></Link>;
+        if(this.props.last === true){
+            nextButtonToBeRendered = <Link onClick={this.props.onLast} to={this.props.next}><button className="question__button">Volgende</button></Link>
+        }
         let starsArray = [];
         for (let i = 0; i < this.state.rating; i++) {
             starsArray.push(<i key={i} onClick={() => this.onStarClicked(i)} className="question__star fa-solid fa-star"></i>)
@@ -45,9 +49,7 @@ class Question extends React.Component {
                     <Link to={this.props.previous}>
                         <button className="question__button">Vorige</button>
                     </Link>
-                    <Link to={this.props.next}>
-                        <button className="question__button">Volgende</button>
-                    </Link>
+                    {nextButtonToBeRendered}
                 </footer>
             </article>
         )
