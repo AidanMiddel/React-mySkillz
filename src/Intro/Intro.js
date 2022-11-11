@@ -3,9 +3,11 @@ import "./Intro.css"
 
 const Intro = () => {
     return (
-        <Link to="/vraag/1">
-            start
-        </Link>
+        <article className="Intro">
+            <Link className="intro__link" to="/vraag/1">
+                start
+            </Link>
+        </article>
     )
 }
 

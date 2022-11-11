@@ -1,7 +1,10 @@
 .outro{
-    width: 65rem;
+    width: 40rem;
     height: 50rem;
     background: #E94560;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 0.5rem 0.2rem hsl(350, 79%, 39%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

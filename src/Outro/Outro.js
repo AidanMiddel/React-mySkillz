@@ -11,8 +11,23 @@ import {
 } from 'chart.js';
 
 const Outro = (props) => {
+    let questions = [];
+    let ratings = []; 
+    props.questionsAndAnswers.map(question => {
+        questions.push("Vraag #" + question.number)
+        ratings.push(question.rating)
+    })
     console.log(props.questionsAndAnswers)
-
+    console.log(ratings)
+    let labels = questions
+    let data = {
+        labels: labels,
+        datasets: [{
+            label: "mijn score",
+            data: ratings,
+            backgroundColor: "black"
+        }]
+    }
     ChartJS.register(
         CategoryScale,
         LinearScale,
@@ -21,14 +36,6 @@ const Outro = (props) => {
         Tooltip,
         Legend
     );
-    let labels = ["nee", "rot", "op"]
-    let data = {
-        labels: labels,
-        datasets: [{
-            label: "AAAA",
-            data: [69, 80, 20],
-        }]
-    }
 
     return (
         <article className="outro">
